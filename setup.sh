@@ -33,8 +33,6 @@ touch internal/repository/sqlconnect/sqlconfig.go
 touch pkg/utils/error_handling.go
 touch pkg/utils/jwt_processing.go
 touch proto/main.proto
-touch go.mod
-touch go.sum
 
 # Initialize Go module using the current folder name
 go mod init github.com/aayushxrj/$PROJECT_NAME
