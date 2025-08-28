@@ -19,7 +19,7 @@ This repository provides a ready-to-use boilerplate for building REST APIs in Go
 3. **Run the setup script to generate the project structure:**
 
     ```bash
-    chmod +x golang-api-templatesetup.sh
+    chmod +x golang-api-template/setup.sh
     ./golang-api-template/setup.sh
     ```
 
