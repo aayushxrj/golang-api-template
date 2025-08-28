@@ -1,17 +1,5 @@
 #!/bin/bash
 
-# Remove existing .git folder (to detach from boilerplate repo)
-if [ -d ".git" ]; then
-    echo "Removing existing .git folder to start fresh..."
-    rm -rf .git
-fi
-
-# Remove existing README.md from boilerplate
-if [ -f "README.md" ]; then
-    echo "Removing boilerplate README.md..."
-    rm README.md
-fi
-
 # Get current folder name as project name
 PROJECT_NAME=$(basename "$PWD")
 
@@ -49,3 +37,6 @@ git add .
 git commit -m "Initialise project structure"
 
 echo "Project '$PROJECT_NAME' has been created and initial commit made successfully!"
+
+rm -rf golang-api-template
+echo "Cleaned up temporary files."

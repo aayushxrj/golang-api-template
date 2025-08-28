@@ -19,16 +19,15 @@ This repository provides a ready-to-use boilerplate for building REST APIs in Go
 3. **Run the setup script to generate the project structure:**
 
     ```bash
-    chmod +x setup.sh
-    ./setup.sh
+    chmod +x golang-api-templatesetup.sh
+    ./golang-api-template/setup.sh
     ```
 
 This will:
-- Remove the existing `.git` history from the boilerplate  
-- Remove the boilerplate `README.md` file  
 - Create the folder structure and placeholder files  
 - Initialize a new Go module using your current folder name  
 - Initialize a fresh Git repository with an initial commit 
+- Remove the temporary files
 
 4. **Start developing your API:**
 
