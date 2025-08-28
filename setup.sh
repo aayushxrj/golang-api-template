@@ -5,6 +5,15 @@ PROJECT_NAME=$(basename "$PWD")
 
 echo "Setting up Golang API boilerplate in '$PROJECT_NAME'..."
 
+# If golang-api-template exists as a submodule, remove it properly
+if [ -d "golang-api-template" ]; then
+    echo "Removing potential submodule golang-api-template..."
+    git submodule deinit -f golang-api-template 2>/dev/null || true
+    git rm -f golang-api-template 2>/dev/null || true
+    rm -rf .git/modules/golang-api-template 2>/dev/null || true
+    rm -rf golang-api-template
+fi
+
 # Create main folders and subfolders
 mkdir -p cmd/api
 mkdir -p internal/api/{handlers,router,middlewares}
@@ -37,6 +46,3 @@ git add .
 git commit -m "Initialise project structure"
 
 echo "Project '$PROJECT_NAME' has been created and initial commit made successfully!"
-
-rm -rf golang-api-template
-echo "Cleaned up temporary files."
