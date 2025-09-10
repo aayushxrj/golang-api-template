@@ -37,26 +37,18 @@ This will:
 ## Folder Structure (Generated)
 ```
 cmd/api/
-    ├── server.go
-    └── .env
+    └── server.go
 internal/
     ├── api/
     │   ├── handlers/
     │   ├── router/
+    │       └── router.go
     │   └── middlewares/
     ├── models/
-    │   ├── user.go
-    │   └── product.go
     └── repository/
-        ├── mongodb/
-        │   └── mongoconnect.go
         └── sqlconnect/
             └── sqlconfig.go
 pkg/utils/
-    ├── error_handling.go
-    └── jwt_processing.go
-proto/
-    └── main.proto
-go.mod
-go.sum
+    └── error_handling.go
+.env
 ```
